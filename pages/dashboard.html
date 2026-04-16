@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Multi-Page E-Learning Platform</h1>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="courses.html">Courses</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+</header>
+
+<section class="breadcrumb">Home > Dashboard</section>
+
+<main class="grid-container">
+
+<section>
+<h2>Courses Overview</h2>
+<table id="courseTable"></table>
+</section>
+
+<section>
+<h2>Progress</h2>
+<progress id="progressBar" value="0" max="100"></progress>
+</section>
+
+</main>
+
+<footer>© 2026 E-Learning</footer>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+</html>
