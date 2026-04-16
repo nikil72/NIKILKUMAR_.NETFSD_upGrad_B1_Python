@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props" />
+</Project>

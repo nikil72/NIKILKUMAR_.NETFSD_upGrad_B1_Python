@@ -1,0 +1,79 @@
+@model ELearnPlatform.Models.DTOs.CourseDto
+@{
+    ViewData["Title"] = Model.Title;
+    var lessons = ViewBag.Lessons as IEnumerable<ELearnPlatform.Models.DTOs.LessonDto> ?? new List<ELearnPlatform.Models.DTOs.LessonDto>();
+    var quizzes = ViewBag.Quizzes as IEnumerable<ELearnPlatform.Models.DTOs.QuizDto> ?? new List<ELearnPlatform.Models.DTOs.QuizDto>();
+}
+
+<div class="page-wrap">
+    <a asp-action="Index" class="back-link">← Back to Courses</a>
+
+    <div class="detail-hero">
+        <span class="course-badge large">@(Model.Category ?? "General")</span>
+        <h1>@Model.Title</h1>
+        <p class="detail-desc">@Model.Description</p>
+        <div class="detail-meta">
+            <span>👤 @Model.CreatorName</span>
+            <span>📅 @Model.CreatedAt.ToString("MMMM d, yyyy")</span>
+            <span>📚 @Model.LessonCount lessons</span>
+            <span>📝 @Model.QuizCount quizzes</span>
+        </div>
+    </div>
+
+    <div class="detail-grid">
+        <!-- Lessons Column -->
+        <div class="detail-section">
+            <div class="section-head">
+                <h2>📚 Lessons</h2>
+                <span class="pill">@lessons.Count()</span>
+            </div>
+            @if (lessons.Any())
+            {
+                <div class="lesson-list">
+                    @foreach (var lesson in lessons.OrderBy(l => l.OrderIndex))
+                    {
+                        <div class="lesson-card">
+                            <div class="lesson-num">@lesson.OrderIndex</div>
+                            <div class="lesson-body">
+                                <strong>@lesson.Title</strong>
+                                <p>@lesson.Content</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else { <div class="empty-inline">No lessons added yet.</div> }
+        </div>
+
+        <!-- Quizzes Column -->
+        <div class="detail-section">
+            <div class="section-head">
+                <h2>📝 Quizzes</h2>
+                <span class="pill">@quizzes.Count()</span>
+            </div>
+            @if (quizzes.Any())
+            {
+                @foreach (var quiz in quizzes)
+                {
+                    <div class="quiz-card">
+                        <div class="quiz-card-info">
+                            <strong>@quiz.Title</strong>
+                            <span>@quiz.QuestionCount questions</span>
+                        </div>
+                        <a asp-controller="Quizzes" asp-action="Take" asp-route-id="@quiz.QuizId"
+                           class="btn-primary btn-sm">Take Quiz →</a>
+                    </div>
+                }
+            }
+            else { <div class="empty-inline">No quizzes yet.</div> }
+
+            <!-- API Reference Card -->
+            <div class="api-card">
+                <div class="api-card-title">🔌 REST API</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/courses/@Model.CourseId</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/courses/@Model.CourseId/lessons</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/quizzes/@Model.CourseId</div>
+            </div>
+        </div>
+    </div>
+</div>

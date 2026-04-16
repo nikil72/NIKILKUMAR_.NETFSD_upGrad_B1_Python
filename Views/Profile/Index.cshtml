@@ -1,0 +1,115 @@
+@{
+    ViewData["Title"] = "My Profile";
+    var user = ViewBag.User as ELearnPlatform.Models.DTOs.UserDto;
+    var results = (ViewBag.Results as IEnumerable<ELearnPlatform.Models.DTOs.ResultDto> ?? new List<ELearnPlatform.Models.DTOs.ResultDto>()).ToList();
+    double avgScore = results.Any() ? results.Average(r => r.Percentage) : 0;
+    double bestScore = results.Any() ? results.Max(r => r.Percentage) : 0;
+}
+
+<div class="page-wrap">
+    <div class="profile-hero">
+        <div class="profile-avatar">@(user?.FullName?.Substring(0, 1).ToUpper())</div>
+        <div class="profile-info">
+            <h1>@user?.FullName</h1>
+            <p>@user?.Email</p>
+            <span class="join-badge">📅 Member since @user?.CreatedAt.ToString("MMMM yyyy")</span>
+        </div>
+        <div class="profile-stats-row">
+            <div class="mini-stat">
+                <span>@results.Count</span>
+                <label>Attempts</label>
+            </div>
+            <div class="mini-stat">
+                <span>@avgScore.ToString("F0")%</span>
+                <label>Avg Score</label>
+            </div>
+            <div class="mini-stat">
+                <span>@bestScore.ToString("F0")%</span>
+                <label>Best Score</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-grid">
+        <!-- Edit Form -->
+        <div class="profile-section">
+            <div class="section-head"><h2>✏️ Edit Profile</h2></div>
+            <form method="post" asp-action="Update" class="profile-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" value="@user?.FullName" required />
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" value="@user?.Email" required />
+                </div>
+                <button type="submit" class="btn-submit">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- Quiz History -->
+        <div class="profile-section">
+            <div class="section-head">
+                <h2>📊 Quiz History</h2>
+                <span class="pill">@results.Count</span>
+            </div>
+            @if (results.Any())
+            {
+                <div class="history-list">
+                    @foreach (var r in results)
+                    {
+                        bool pass = r.Percentage >= 60;
+                        <div class="history-row @(pass ? "pass" : "fail")">
+                            <div class="history-bar" style="width: @r.Percentage.ToString("F0")%"></div>
+                            <div class="history-content">
+                                <div class="history-title">@r.QuizTitle</div>
+                                <div class="history-course">@r.CourseTitle</div>
+                                <div class="history-date">@r.AttemptDate.ToString("MMM d, yyyy")</div>
+                            </div>
+                            <div class="history-score">
+                                <span class="h-pct @(pass ? "pass" : "fail")">@r.Percentage.ToString("F0")%</span>
+                                <span class="h-frac">@r.Score/@r.TotalQuestions</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state compact">
+                    <div class="empty-icon">🎯</div>
+                    <p>No quiz attempts yet.</p>
+                    <a asp-controller="Courses" asp-action="Index" class="btn-outline btn-sm">Start a Quiz</a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- API Reference -->
+    <div class="api-reference-card">
+        <h3>🔌 REST API Endpoints</h3>
+        <div class="api-grid">
+            <div class="api-col">
+                <div class="api-group-title">Courses</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/courses</div>
+                <div class="api-endpoint"><span class="method post">POST</span> /api/courses</div>
+                <div class="api-endpoint"><span class="method put">PUT</span> /api/courses/{id}</div>
+                <div class="api-endpoint"><span class="method del">DELETE</span> /api/courses/{id}</div>
+            </div>
+            <div class="api-col">
+                <div class="api-group-title">Quizzes</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/quizzes/{courseId}</div>
+                <div class="api-endpoint"><span class="method post">POST</span> /api/quizzes</div>
+                <div class="api-endpoint"><span class="method post">POST</span> /api/quizzes/{id}/submit</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/results/@(user?.UserId ?? 0)</div>
+            </div>
+            <div class="api-col">
+                <div class="api-group-title">Users</div>
+                <div class="api-endpoint"><span class="method post">POST</span> /api/users/register</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/users/@(user?.UserId ?? 0)</div>
+                <div class="api-endpoint"><span class="method put">PUT</span> /api/users/@(user?.UserId ?? 0)</div>
+                <div class="api-endpoint"><span class="method get">GET</span> /api/courses/{id}/lessons</div>
+            </div>
+        </div>
+    </div>
+</div>

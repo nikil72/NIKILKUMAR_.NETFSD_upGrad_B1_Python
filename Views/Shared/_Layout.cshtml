@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — ELearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" asp-controller="Home" asp-action="Index">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#6C63FF"/><path d="M7 14L11 10L15 16L19 12L21 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ELearn
+        </a>
+        <div class="nav-links">
+            <a asp-controller="Courses" asp-action="Index">Courses</a>
+            <a href="/swagger" target="_blank" class="nav-swagger">API Docs</a>
+            @if (Context.Session.GetInt32("UserId") != null)
+            {
+                <a asp-controller="Profile" asp-action="Index" class="nav-user">
+                    <span class="nav-avatar">@Context.Session.GetString("UserName")?.Substring(0,1).ToUpper()</span>
+                    @Context.Session.GetString("UserName")
+                </a>
+                <a asp-controller="Home" asp-action="Logout" class="btn-nav-ghost">Logout</a>
+            }
+            else
+            {
+                <a asp-controller="Home" asp-action="Login">Login</a>
+                <a asp-controller="Home" asp-action="Register" class="btn-nav">Get Started</a>
+            }
+        </div>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    </nav>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="toast toast-success">✓ @TempData["Success"]</div>
+    }
+
+    <main>@RenderBody()</main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#6C63FF"/><path d="M7 14L11 10L15 16L19 12L21 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ELearn
+            </div>
+            <p>© 2025 ELearn Platform · ASP.NET Core 8 + SQLite + EF Core</p>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

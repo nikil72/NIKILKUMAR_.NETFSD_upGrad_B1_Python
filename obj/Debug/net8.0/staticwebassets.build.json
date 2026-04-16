@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "3wOkIBoAjjIw1+/8ChboWI+ulrlFAEZuBwpSKIwm4Uo=",
+  "Source": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+  "BasePath": "_content/B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot",
+      "Source": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "ContentRoot": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\",
+      "BasePath": "_content/B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\css\\site.css",
+      "SourceId": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\",
+      "BasePath": "_content/B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\css\\swagger-custom.css",
+      "SourceId": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\",
+      "BasePath": "_content/B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "RelativePath": "css/swagger-custom.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\swagger-custom.css"
+    },
+    {
+      "Identity": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\js\\site.js",
+      "SourceId": "B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\",
+      "BasePath": "_content/B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}

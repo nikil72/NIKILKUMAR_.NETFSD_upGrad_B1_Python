@@ -1,0 +1,112 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    var courses = ViewBag.Courses as IEnumerable<ELearnPlatform.Models.DTOs.CourseDto> ?? new List<ELearnPlatform.Models.DTOs.CourseDto>();
+    bool loggedIn = Context.Session.GetInt32("UserId") != null;
+}
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">🎓 Enterprise E-Learning Platform</div>
+        <h1>Learn Smarter.<br><span class="accent">Build Faster.</span></h1>
+        <p class="hero-sub">Structured courses, interactive quizzes, progress tracking — powered by ASP.NET Core 8 &amp; SQLite.</p>
+        <div class="hero-cta">
+            <a asp-controller="Courses" asp-action="Index" class="btn-primary btn-lg">
+                <span>Explore Courses</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            @if (!loggedIn)
+            {
+                <a asp-controller="Home" asp-action="Register" class="btn-outline btn-lg">Sign Up Free</a>
+            }
+            else
+            {
+                <a asp-controller="Profile" asp-action="Index" class="btn-outline btn-lg">My Profile</a>
+            }
+        </div>
+    </div>
+    <div class="hero-stats">
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <span class="stat-num">@ViewBag.CourseCount</span>
+            <span class="stat-label">Courses</span>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <span class="stat-num">@(ViewBag.QuizzesTaken ?? 0)</span>
+            <span class="stat-label">Quizzes Taken</span>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <span class="stat-num">@(ViewBag.AvgScore != null ? $"{(double)ViewBag.AvgScore:F0}%" : "—")</span>
+            <span class="stat-label">Avg Score</span>
+        </div>
+    </div>
+</section>
+
+<section class="features-strip">
+    <div class="feature-item">
+        <span>🏗️</span>
+        <span>ASP.NET Core 8 MVC</span>
+    </div>
+    <div class="feature-sep">·</div>
+    <div class="feature-item">
+        <span>🗃️</span>
+        <span>SQLite + EF Core</span>
+    </div>
+    <div class="feature-sep">·</div>
+    <div class="feature-item">
+        <span>🔌</span>
+        <span>REST API</span>
+    </div>
+    <div class="feature-sep">·</div>
+    <div class="feature-item">
+        <span>🔒</span>
+        <span>BCrypt Security</span>
+    </div>
+    <div class="feature-sep">·</div>
+    <div class="feature-item">
+        <span>🗺️</span>
+        <span>Repository Pattern</span>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Featured Courses</h2>
+        <a asp-controller="Courses" asp-action="Index" class="see-all">See all →</a>
+    </div>
+    <div class="course-grid">
+        @foreach (var course in courses.Take(4))
+        {
+            <div class="course-card">
+                <div class="course-card-top">
+                    <span class="course-badge">@(course.Category ?? "General")</span>
+                </div>
+                <h3>@course.Title</h3>
+                <p>@course.Description</p>
+                <div class="course-meta">
+                    <span class="meta-chip">📚 @course.LessonCount lessons</span>
+                    <span class="meta-chip">📝 @course.QuizCount quizzes</span>
+                </div>
+                <a asp-controller="Courses" asp-action="Details" asp-route-id="@course.CourseId" class="btn-card">
+                    Start Learning <span>→</span>
+                </a>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="cta-band-inner">
+        <h2>Ready to level up your skills?</h2>
+        <p>Join and start taking quizzes, tracking progress, and building expertise.</p>
+        @if (!loggedIn)
+        {
+            <a asp-controller="Home" asp-action="Register" class="btn-primary btn-lg">Create Free Account →</a>
+        }
+        else
+        {
+            <a asp-controller="Courses" asp-action="Create" class="btn-primary btn-lg">Create a Course →</a>
+        }
+    </div>
+</section>

@@ -1,0 +1,93 @@
+@{
+    ViewData["Title"] = "Take Quiz";
+    var questions = ViewBag.Questions as IEnumerable<ELearnPlatform.Models.DTOs.QuestionDto>
+        ?? new List<ELearnPlatform.Models.DTOs.QuestionDto>();
+    var qList = questions.ToList();
+}
+
+<div class="quiz-page">
+    <div class="quiz-topbar">
+        <div class="quiz-progress-wrap">
+            <div class="quiz-title-bar">
+                <h1>Quiz</h1>
+                <span class="q-count">@qList.Count questions</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+        </div>
+        <div class="timer-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M7 4v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span id="timerDisplay">00:00</span>
+        </div>
+    </div>
+
+    <form method="post" asp-action="Submit" id="quizForm">
+        <input type="hidden" name="quizId" value="@ViewBag.QuizId" />
+        <div class="questions-list">
+            @{int i = 0;}
+            @foreach (var q in qList)
+            {
+                i++;
+                <div class="question-card" data-q="@i">
+                    <div class="q-header">
+                        <span class="q-badge">Q@i</span>
+                        <span class="q-text">@q.QuestionText</span>
+                    </div>
+                    <div class="options">
+                        @foreach (var opt in new[] {("A", q.OptionA), ("B", q.OptionB), ("C", q.OptionC), ("D", q.OptionD)})
+                        {
+                            <label class="option-label" onclick="selectOption(this, @i)">
+                                <input type="radio" name="answers[@q.QuestionId]" value="@opt.Item1" />
+                                <span class="opt-key">@opt.Item1</span>
+                                <span class="opt-text">@opt.Item2</span>
+                                <span class="opt-check">✓</span>
+                            </label>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="quiz-footer">
+            <div class="answered-status">
+                <span id="answeredCount">0</span> / @qList.Count answered
+            </div>
+            <button type="submit" class="btn-primary btn-lg" id="submitBtn">
+                Submit Quiz →
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+<script>
+    let seconds = 0;
+    const timer = setInterval(() => {
+        seconds++;
+        const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const s = String(seconds % 60).padStart(2, '0');
+        document.getElementById('timerDisplay').textContent = m + ':' + s;
+    }, 1000);
+
+    let answered = new Set();
+
+    function selectOption(label, qNum) {
+        const opts = label.closest('.options').querySelectorAll('.option-label');
+        opts.forEach(o => o.classList.remove('selected'));
+        label.classList.add('selected');
+        answered.add(qNum);
+        document.getElementById('answeredCount').textContent = answered.size;
+        const total = @qList.Count;
+        document.getElementById('progressFill').style.width = (answered.size / total * 100) + '%';
+    }
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+        const unanswered = @qList.Count - answered.size;
+        if (unanswered > 0) {
+            if (!confirm(`You have ${unanswered} unanswered question(s). Submit anyway?`)) {
+                e.preventDefault();
+            }
+        }
+        clearInterval(timer);
+    });
+</script>
+}

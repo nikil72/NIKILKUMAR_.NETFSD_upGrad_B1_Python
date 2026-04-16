@@ -1,0 +1,72 @@
+@model IEnumerable<ELearnPlatform.Models.DTOs.CourseDto>
+@{ ViewData["Title"] = "All Courses"; }
+
+<div class="page-wrap">
+    <div class="page-header">
+        <div>
+            <h1>All Courses</h1>
+            <p class="page-sub">@Model.Count() courses available</p>
+        </div>
+        <a asp-action="Create" class="btn-primary">+ New Course</a>
+    </div>
+
+    <form method="get" asp-action="Index" class="search-bar">
+        <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <input type="text" name="search" value="@ViewBag.Search" placeholder="Search courses..." />
+        </div>
+        <select name="category">
+            <option value="">All Categories</option>
+            <option value="Backend" selected="@(ViewBag.Category=="Backend" ? "selected" : null)">Backend</option>
+            <option value="Programming" selected="@(ViewBag.Category=="Programming" ? "selected" : null)">Programming</option>
+            <option value="Database" selected="@(ViewBag.Category=="Database" ? "selected" : null)">Database</option>
+            <option value="Architecture" selected="@(ViewBag.Category=="Architecture" ? "selected" : null)">Architecture</option>
+            <option value="Frontend" selected="@(ViewBag.Category=="Frontend" ? "selected" : null)">Frontend</option>
+        </select>
+        <button type="submit" class="btn-primary">Search</button>
+        @if (!string.IsNullOrEmpty(ViewBag.Search?.ToString()) || !string.IsNullOrEmpty(ViewBag.Category?.ToString()))
+        {
+            <a asp-action="Index" class="btn-outline">Clear</a>
+        }
+    </form>
+
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No courses found</h3>
+            <p>Try a different search or category.</p>
+        </div>
+    }
+    else
+    {
+        <div class="course-grid">
+            @foreach (var course in Model)
+            {
+                <div class="course-card">
+                    <div class="course-card-top">
+                        <span class="course-badge">@(course.Category ?? "General")</span>
+                        <span class="course-date">@course.CreatedAt.ToString("MMM d, yyyy")</span>
+                    </div>
+                    <h3>@course.Title</h3>
+                    <p>@(course.Description.Length > 100 ? course.Description.Substring(0, 100) + "…" : course.Description)</p>
+                    <div class="course-meta">
+                        <span class="meta-chip">📚 @course.LessonCount</span>
+                        <span class="meta-chip">📝 @course.QuizCount</span>
+                        <span class="meta-chip">👤 @course.CreatorName</span>
+                    </div>
+                    <div class="card-actions">
+                        <a asp-action="Details" asp-route-id="@course.CourseId" class="btn-card">View Course →</a>
+                        <form method="post" asp-action="Delete" asp-route-id="@course.CourseId" style="display:inline"
+                              onsubmit="return confirm('Delete this course?')">
+                            <button type="submit" class="btn-delete">🗑</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

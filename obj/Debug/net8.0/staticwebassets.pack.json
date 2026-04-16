@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\css\\swagger-custom.css",
+      "PackagePath": "staticwebassets\\css\\swagger-custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Nikil kumar\\Desktop\\B5_.Net Standard_Nikil Kumar_MultiPage_E-Learning_Platform_Backend\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props",
+      "PackagePath": "build\\B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props",
+      "PackagePath": "buildMultiTargeting\\B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props",
+      "PackagePath": "buildTransitive\\B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
