@@ -1,0 +1,11 @@
+ticket_id,ticket_type,employee_name,department,description,category,priority,status,created_at,resolved_at,sla_breached,resolution_notes,workaround,root_cause,change_type
+TKT-1F18EC7E,Incident,Alice Johnson,IT,Server completely down,Server Down,P1,Open,2026-04-29 04:01:18,,False,,,,
+TKT-2F780E8F,ServiceRequest,Bob Sharma,HR,Cannot reset password,Password Reset,P4,Closed,2026-04-29 04:01:18,2026-04-29 04:01:18,False,,,,
+TKT-E178C3AD,Incident,Carol White,Finance,Laptop extremely slow,Laptop Slow,P3,In Progress,2026-04-29 04:01:18,,False,,,,
+TKT-553294FC,Incident,David Lee,Dev,Internet not working,Internet Down,P2,Open,2026-04-29 04:01:18,,False,,,,
+TKT-4AC182A4,ServiceRequest,Eva Martinez,Sales,Printer not working,Printer Failure,P4,Closed,2026-04-29 04:01:18,2026-04-29 04:01:18,False,,,,
+TKT-8D69F2AD,Incident,Frank Singh,IT,Disk almost full,Disk Full,P3,Open,2026-04-29 04:01:18,,False,,,,
+TKT-7909F167,Incident,Grace Kim,Dev,App crash on startup,Application Crash,P3,Resolved,2026-04-29 04:01:18,2026-04-29 04:01:18,False,,,,
+TKT-0A13C558,Incident,Harry Patel,Finance,Server down again,Server Down,P1,Open,2026-04-29 04:01:18,,False,,,,
+TKT-E32F77A6,ServiceRequest,Irene Tan,HR,Software install needed,Software Install,P4,Open,2026-04-29 04:01:18,,False,,,,
+TKT-5CCE31C4,Incident,James Nair,IT,High CPU detected,High CPU,P3,Open,2026-04-29 04:01:18,,False,,,,

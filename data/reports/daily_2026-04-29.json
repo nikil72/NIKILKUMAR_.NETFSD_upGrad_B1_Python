@@ -1,0 +1,15 @@
+{
+  "report_type": "Daily",
+  "date": "2026-04-29",
+  "generated_at": "2026-04-29 04:01:33",
+  "total_tickets": 10,
+  "open_tickets": 6,
+  "closed_tickets": 3,
+  "high_priority_tickets": 3,
+  "sla_breaches": 0,
+  "p1_count": 2,
+  "p2_count": 1,
+  "p3_count": 4,
+  "p4_count": 3,
+  "avg_resolution_hours": 0.0
+}

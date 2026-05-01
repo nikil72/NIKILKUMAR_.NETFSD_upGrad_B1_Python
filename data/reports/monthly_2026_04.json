@@ -1,0 +1,40 @@
+{
+  "report_type": "Monthly",
+  "year": 2026,
+  "month": 4,
+  "generated_at": "2026-04-29 04:01:33",
+  "total_tickets": 10,
+  "most_common_issue": "Server Down",
+  "most_common_issue_count": 2,
+  "avg_resolution_hours": 0.0,
+  "dept_most_incidents": "IT",
+  "repeated_problems": [],
+  "sla_breaches": 0,
+  "category_breakdown": {
+    "Server Down": 2,
+    "Password Reset": 1,
+    "Laptop Slow": 1,
+    "Internet Down": 1,
+    "Printer Failure": 1,
+    "Disk Full": 1,
+    "Application Crash": 1,
+    "Software Install": 1,
+    "High CPU": 1
+  },
+  "department_breakdown": {
+    "IT": 3,
+    "HR": 2,
+    "Finance": 2,
+    "Dev": 2,
+    "Sales": 1
+  },
+  "week_counts": {
+    "Week 18": 10
+  },
+  "priority_avg_resolution": {
+    "P1": 0.0,
+    "P2": 0.0,
+    "P3": 0.0,
+    "P4": 0.0
+  }
+}

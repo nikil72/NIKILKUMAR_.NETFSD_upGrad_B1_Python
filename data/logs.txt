@@ -1,0 +1,191 @@
+2026-04-29 03:54:32 | INFO     | TicketManager | Loaded 0 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:54:32 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 03:54:32 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 03:54:32 | INFO     | TicketManager | Saved 1 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:54:32 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 03:54:32 | INFO     | TicketManager | Created ticket TKT-CDEA973A [Incident] P=P1
+2026-04-29 03:54:32 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 03:54:32 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:54:32 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv
+2026-04-29 03:54:32 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:54:36 | INFO     | TicketManager | Loaded 0 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:54:36 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:54:36 | WARNING  | TicketManager | No tickets to backup.
+2026-04-29 03:54:36 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:54:39 | INFO     | TicketManager | Loaded 0 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:54:39 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:54:39 | WARNING  | TicketManager | No tickets to backup.
+2026-04-29 03:54:39 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | Loaded 0 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:55:08 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (0 records)
+2026-04-29 03:55:08 | WARNING  | TicketManager | Backup created with headers only — no tickets exist yet.
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 03:55:08 | INFO     | TicketManager | Saved 1 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:55:08 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (1 records)
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | Created ticket TKT-C4AF4576 [Incident] P=P1
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 03:55:08 | INFO     | TicketManager | Saved 2 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 03:55:08 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 03:55:08 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (2 records)
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 03:55:08 | INFO     | TicketManager | Created ticket TKT-525B6C96 [Incident] P=P4
+2026-04-29 03:55:08 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Loaded 0 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (0 records)
+2026-04-29 04:01:18 | WARNING  | TicketManager | Backup created with headers only — no tickets exist yet.
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 1 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (1 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-1F18EC7E [Incident] P=P1
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 2 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (2 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-2F780E8F [ServiceRequest] P=P4
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 3 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (3 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-E178C3AD [Incident] P=P3
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 4 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (4 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-553294FC [Incident] P=P2
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 5 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (5 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-4AC182A4 [ServiceRequest] P=P4
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 6 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (6 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-8D69F2AD [Incident] P=P3
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 7 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (7 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-7909F167 [Incident] P=P3
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 8 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (8 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-0A13C558 [Incident] P=P1
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 9 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (9 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-E32F77A6 [ServiceRequest] P=P4
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling create_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 10 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Created ticket TKT-5CCE31C4 [Incident] P=P3
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ create_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling close_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling update_status
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 10 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Ticket TKT-2F780E8F: Open → Closed
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ update_status completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ close_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling close_ticket
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling update_status
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 10 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Ticket TKT-4AC182A4: Open → Closed
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ update_status completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ close_ticket completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling update_status
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 10 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Ticket TKT-E178C3AD: Open → In Progress
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ update_status completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling update_status
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling save_tickets
+2026-04-29 04:01:18 | INFO     | TicketManager | Saved 10 tickets to /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:18 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:18 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ save_tickets completed successfully
+2026-04-29 04:01:18 | INFO     | TicketManager | Ticket TKT-7909F167: Open → Resolved
+2026-04-29 04:01:18 | INFO     | TicketManager | ✓ update_status completed successfully
+2026-04-29 04:01:33 | INFO     | TicketManager | Loaded 10 tickets from /home/claude/smart_it_service_desk/data/tickets.json
+2026-04-29 04:01:33 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 04:01:33 | INFO     | TicketManager | Backup written to /home/claude/smart_it_service_desk/data/backup.csv (10 records)
+2026-04-29 04:01:33 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 04:01:33 | INFO     | ReportGenerator | → Calling generate_daily_report
+2026-04-29 04:01:33 | INFO     | ReportGenerator | Report saved to /home/claude/smart_it_service_desk/data/reports/daily_2026-04-29.json
+2026-04-29 04:01:33 | INFO     | ReportGenerator | ✓ generate_daily_report completed successfully
+2026-04-29 04:01:33 | INFO     | ReportGenerator | → Calling generate_monthly_report
+2026-04-29 04:01:33 | INFO     | ReportGenerator | Report saved to /home/claude/smart_it_service_desk/data/reports/monthly_2026_04.json
+2026-04-29 04:01:33 | INFO     | ReportGenerator | ✓ generate_monthly_report completed successfully
+2026-04-29 09:34:04 | INFO     | TicketManager | Loaded 10 tickets from C:\smart_it_service_desk\data\tickets.json
+2026-04-29 09:34:04 | INFO     | TicketManager | → Calling backup_to_csv
+2026-04-29 09:34:04 | INFO     | TicketManager | Backup written to C:\smart_it_service_desk\data\backup.csv (10 records)
+2026-04-29 09:34:04 | INFO     | TicketManager | ✓ backup_to_csv completed successfully
+2026-04-29 09:34:04 | INFO     | System | Smart IT Service Desk started.
