@@ -1,0 +1,51 @@
+@model ELearnPlatform.Models.DTOs.ResultDto
+@{ ViewData["Title"] = "Quiz Result"; bool pass = Model.Percentage >= 60; }
+
+<div class="result-page">
+    <div class="result-card @(pass ? "pass" : "fail")">
+        <div class="result-glow"></div>
+        <div class="result-emoji">@(pass ? "🏆" : "💪")</div>
+        <h1>@(pass ? "Excellent Work!" : "Keep Practicing!")</h1>
+
+        <div class="score-ring">
+            <svg viewBox="0 0 120 120" width="160" height="160">
+                <circle cx="60" cy="60" r="50" stroke="#1a2035" stroke-width="12" fill="none"/>
+                <circle cx="60" cy="60" r="50"
+                    stroke="@(pass ? "#06d6a0" : "#ef476f")"
+                    stroke-width="12" fill="none"
+                    stroke-dasharray="@(314 * Model.Percentage / 100) 314"
+                    stroke-dashoffset="78.5"
+                    stroke-linecap="round"
+                    style="transition: stroke-dasharray 1.2s ease"/>
+            </svg>
+            <div class="score-text">
+                <span class="score-big">@Model.Percentage.ToString("F0")%</span>
+                <span class="score-fraction">@Model.Score / @Model.TotalQuestions</span>
+            </div>
+        </div>
+
+        <div class="result-meta">
+            <div class="result-meta-item">
+                <span class="meta-label">Quiz</span>
+                <span class="meta-val">@Model.QuizTitle</span>
+            </div>
+            <div class="result-meta-item">
+                <span class="meta-label">Course</span>
+                <span class="meta-val">@Model.CourseTitle</span>
+            </div>
+            <div class="result-meta-item">
+                <span class="meta-label">Date</span>
+                <span class="meta-val">@Model.AttemptDate.ToString("MMM d, yyyy · h:mm tt")</span>
+            </div>
+            <div class="result-meta-item">
+                <span class="meta-label">Status</span>
+                <span class="meta-val status-@(pass ? "pass" : "fail")">@(pass ? "✓ Passed" : "✗ Not Passed")</span>
+            </div>
+        </div>
+
+        <div class="result-actions">
+            <a asp-controller="Courses" asp-action="Index" class="btn-primary">Browse More Courses</a>
+            <a asp-controller="Profile" asp-action="Index" class="btn-outline">View Profile</a>
+        </div>
+    </div>
+</div>

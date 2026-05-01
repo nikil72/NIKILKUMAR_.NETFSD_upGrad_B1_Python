@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>B5_.Net_Standard_Nikil_Kumar_MultiPage_E-Learning_Platform_Backend</name>
+    </assembly>
+    <members>
+        <member name="T:ELearnPlatform.Controllers.API.CoursesApiController">
+            <summary>Manage courses</summary>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.CoursesApiController.GetAll">
+            <summary>Get all courses</summary>
+            <returns>List of all courses with lesson/quiz counts</returns>
+            <response code="200">Returns the list of courses</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.CoursesApiController.GetById(System.Int32)">
+            <summary>Get a course by ID</summary>
+            <param name="id">Course ID</param>
+            <response code="200">Course found</response>
+            <response code="404">Course not found</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.CoursesApiController.Create(ELearnPlatform.Models.DTOs.CreateCourseDto)">
+            <summary>Create a new course</summary>
+            <param name="dto">Course data</param>
+            <response code="201">Course created successfully</response>
+            <response code="400">Validation error</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.CoursesApiController.Update(System.Int32,ELearnPlatform.Models.DTOs.UpdateCourseDto)">
+            <summary>Update an existing course</summary>
+            <param name="id">Course ID</param>
+            <param name="dto">Updated course data</param>
+            <response code="200">Course updated</response>
+            <response code="404">Course not found</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.CoursesApiController.Delete(System.Int32)">
+            <summary>Delete a course</summary>
+            <param name="id">Course ID</param>
+            <response code="204">Deleted successfully</response>
+            <response code="404">Course not found</response>
+        </member>
+        <member name="T:ELearnPlatform.Controllers.API.LessonsApiController">
+            <summary>Manage lessons within courses</summary>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.LessonsApiController.GetByCourse(System.Int32)">
+            <summary>Get all lessons for a course</summary>
+            <param name="courseId">Course ID</param>
+            <response code="200">Ordered list of lessons</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.LessonsApiController.Create(ELearnPlatform.Models.DTOs.CreateLessonDto)">
+            <summary>Create a new lesson</summary>
+            <param name="dto">Lesson data including CourseId, Title, Content, OrderIndex</param>
+            <response code="201">Lesson created</response>
+            <response code="400">Validation error</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.LessonsApiController.Update(System.Int32,ELearnPlatform.Models.DTOs.CreateLessonDto)">
+            <summary>Update a lesson</summary>
+            <param name="id">Lesson ID</param>
+            <param name="dto">Updated lesson data</param>
+            <response code="200">Lesson updated</response>
+            <response code="404">Lesson not found</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.LessonsApiController.Delete(System.Int32)">
+            <summary>Delete a lesson</summary>
+            <param name="id">Lesson ID</param>
+            <response code="204">Deleted successfully</response>
+            <response code="404">Lesson not found</response>
+        </member>
+        <member name="T:ELearnPlatform.Controllers.API.QuizzesApiController">
+            <summary>Manage quizzes, questions and quiz submissions</summary>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.GetByCourse(System.Int32)">
+            <summary>Get all quizzes for a course</summary>
+            <param name="courseId">Course ID</param>
+            <response code="200">List of quizzes with question counts</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.Create(ELearnPlatform.Models.DTOs.CreateQuizDto)">
+            <summary>Create a new quiz</summary>
+            <param name="dto">Quiz data (CourseId + Title)</param>
+            <response code="201">Quiz created</response>
+            <response code="400">Validation error</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.GetQuestions(System.Int32)">
+            <summary>Get all questions for a quiz (answers hidden)</summary>
+            <param name="quizId">Quiz ID</param>
+            <response code="200">List of questions without correct answers</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.AddQuestion(ELearnPlatform.Models.DTOs.CreateQuestionDto)">
+            <summary>Add a question to a quiz</summary>
+            <param name="dto">Question data with all options and the correct answer key (A/B/C/D)</param>
+            <response code="201">Question added</response>
+            <response code="400">Validation error</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.Submit(System.Int32,ELearnPlatform.Models.DTOs.QuizSubmitDto)">
+            <summary>Submit quiz answers and get scored result</summary>
+            <param name="quizId">Quiz ID</param>
+            <param name="dto">Answers map: { QuestionId: "A"|"B"|"C"|"D" }</param>
+            <response code="200">Result with score and percentage</response>
+            <response code="404">Quiz not found</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.QuizzesApiController.GetResults(System.Int32,ELearnPlatform.Services.Interfaces.IResultService)">
+            <summary>Get all quiz results for a user</summary>
+            <param name="userId">User ID</param>
+            <response code="200">List of quiz results with scores and dates</response>
+        </member>
+        <member name="T:ELearnPlatform.Controllers.API.UsersApiController">
+            <summary>Manage user accounts</summary>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.UsersApiController.Register(ELearnPlatform.Models.DTOs.RegisterDto)">
+            <summary>Register a new user</summary>
+            <param name="dto">Registration data (FullName, Email, Password)</param>
+            <response code="201">User registered successfully</response>
+            <response code="400">Email already in use or validation error</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.UsersApiController.GetById(System.Int32)">
+            <summary>Get user by ID</summary>
+            <param name="id">User ID</param>
+            <response code="200">User data (no password hash exposed)</response>
+            <response code="404">User not found</response>
+        </member>
+        <member name="M:ELearnPlatform.Controllers.API.UsersApiController.Update(System.Int32,ELearnPlatform.Models.DTOs.UpdateUserDto)">
+            <summary>Update user profile</summary>
+            <param name="id">User ID</param>
+            <param name="dto">Updated name and email</param>
+            <response code="200">User updated</response>
+            <response code="404">User not found</response>
+        </member>
+        <member name="T:ELearnPlatform.Tests.ELearnTests">
+            <summary>
+            Unit tests for Course CRUD, Quiz scoring, LINQ, API validation, and security.
+            Run with: dotnet test
+            </summary>
+        </member>
+    </members>
+</doc>
